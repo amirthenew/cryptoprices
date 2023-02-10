@@ -1,7 +1,7 @@
 import React,{useState,useEffect}from 'react';
 
 import { getCoin } from '../services/api';
-
+import Loader from './Loader';
 
 const Landing = () => {
 
@@ -18,6 +18,7 @@ fetchAPI()
 
     return (
       <React.Fragment>
+      <loader/>
       <input type='text' placeholder='search'/>
       <div>
       {
