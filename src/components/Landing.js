@@ -17,18 +17,20 @@ fetchAPI()
     },[])
 
     return (
-      <React.Fragment>
-      <loader/>
+     <div>
       <input type='text' placeholder='search'/>
-      <div>
-      {
-        coins.map(coin=><p key={coin.id}>{coin.name}</p>)
+      { 
+        coins.length ? 
+        <div>
+        {
+ coins.map(coin =><p key={coin.id}>{coin.name}</p>)
+        }
+ </div> : <Loader/>   
+      }  
+ </div>
+   
+);
       }
-      </div>
-        </React.Fragment>
-        )
-    
 
-}
  
-export default Landing;
+export default Landing
