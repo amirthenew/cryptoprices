@@ -1,5 +1,6 @@
 import React,{useState,useEffect}from 'react';
 
+import styles from './Landing.module.css'
 import { getCoin } from '../services/api';
 import Loader from './Loader';
 import Coin from './Coin';
@@ -26,10 +27,10 @@ const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search
 
     return (
      <div>
-      <input value={search} type='text' placeholder='search' onChange={searchHandler}/>
+      <input className={styles.input} value={search} type='text' placeholder='search' onChange={searchHandler}/>
       { 
         coins.length ? 
-        <div>
+        <div className={styles.coinContainer}>
         {
  searchedCoins.map(coin =><Coin
   key={coin.id}
