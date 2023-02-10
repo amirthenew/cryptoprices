@@ -37,9 +37,9 @@ const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search
   name={coin.name}
   image={coin.image}
   symbol={coin.symbol}
-  proce={coin.current_price}
+  price={coin.current_price}
   marketCap = {coin.market_cap}
-  priceChange={coin.price_change_perventage_24h}
+  priceChange={coin.price_change_percentage_24h}
    />)
         }
  </div> : <Loader/>   

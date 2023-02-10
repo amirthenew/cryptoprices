@@ -1,13 +1,16 @@
 .coinContainer{
-    margin: 3rem auto;
+
     border: 1px solid #000;
     border-radius: .6rem;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
+    padding: 2rem 0;
 }
 
 .input{
-    width: 300px;
-    margin-top: 50px;
+    width: 200px;
+    margin: 3rem 1rem;
     border: 1px solid silver;
     border-radius: .4rem;
     height: 20px;
