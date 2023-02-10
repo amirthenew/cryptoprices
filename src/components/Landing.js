@@ -7,6 +7,7 @@ import Coin from './Coin';
 const Landing = () => {
 
   const [coins,setCoins]=useState([])
+  const [search,setSearch]=useState('')
 
     useEffect(()=>{
 const fetchAPI = async()=>{
@@ -17,9 +18,14 @@ const fetchAPI = async()=>{
 fetchAPI()
     },[])
 
+const searchHandler = (event)=>{
+  setSearch(event.target.value)
+}
+
+
     return (
      <div>
-      <input type='text' placeholder='search'/>
+      <input value={search} type='text' placeholder='search' onChange={searchHandler}/>
       { 
         coins.length ? 
         <div>
