@@ -23,7 +23,7 @@ fetchAPI()
         coins.length ? 
         <div>
         {
- coins.map(coin =><p key={coin.id}>{coin.name}</p>)
+ coins.map(coin =><p key={coin.id}>{coin.name} {coin.current_price}$</p>)
         }
  </div> : <Loader/>   
       }  
