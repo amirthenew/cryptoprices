@@ -1,22 +1,24 @@
 import React from 'react';
-import GifLoader from 'react-gif-loader'
-import loadingGif from '../img/Loading_icon.gif'
-import styled from 'styled-components';
+// import GifLoader from 'react-gif-loader'
+// import loadingGif from '../img/Loading_icon.gif'
+import styles from '../components/Loader.module.css'
 
-const MyDiv = styled.div`
-background-color : #fff;
-
-
-`
 
 const Loader = () => {
-    return (<MyDiv>
-        <GifLoader
-        loading={true}
-        imageSrc={loadingGif}
+    return (<div className={styles.loading}>
+<h1>
 
-        />
-        </MyDiv>  );
+loading . . .</h1> 
+        </div>  );
 }
  
 export default Loader;
+
+
+
+// <GifLoader
+// loading={true}
+// imageSrc={loadingGif}
+// className={styles.loading}
+
+// />
