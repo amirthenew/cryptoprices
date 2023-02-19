@@ -22,10 +22,6 @@ const fetchAPI = async()=>{
   console.log(mine);
  }
 
- 
-
-
-
 }
 fetchAPI()
     },[])
@@ -34,12 +30,23 @@ const searchHandler = (event)=>{
   setSearch(event.target.value)
 }
 
+const sortByName = ()=>{
+
+  coins.map((coin)=>console.log(coin.id.sort()) )
+
+  
+  
+
+  
+}
+
 const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search.toLowerCase()) )
 
     return (
      <div>
  
       <input className={styles.input} value={search} type='text' placeholder='search' onChange={searchHandler}/>
+      <button onClick={sortByName}>sort by name</button>
       { 
         coins.length ? 
         <div className={styles.coinContainer}>
