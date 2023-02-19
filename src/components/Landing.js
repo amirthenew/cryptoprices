@@ -15,13 +15,6 @@ const Landing = () => {
 const fetchAPI = async()=>{
   const data = await getCoin()
  setCoins(data)
- const newArr = []
-
- for (let i =0 ;i<data.length;i++){
-  const mine = newArr.push(data)
-  console.log(mine);
- }
-
 }
 fetchAPI()
     },[])
@@ -31,8 +24,16 @@ const searchHandler = (event)=>{
 }
 
 const sortByName = ()=>{
+  console.log(coins)
+  const newCoinArray = []
+  coins.map((coin)=>newCoinArray.push(coin.id))
+  console.log(newCoinArray);
+  // coins.sort(function(a,b){
+  //   return a===b ? 0 : a<b ? -1 : 1
+  // })
+ 
 
-  coins.map((coin)=>console.log(coin.id.sort()) )
+  // coins.map((coin)=>console.log(coin.id.sort()) )
 
   
   
