@@ -1,24 +1,20 @@
 import React from 'react';
-// import GifLoader from 'react-gif-loader'
-// import loadingGif from '../img/Loading_icon.gif'
-import styles from '../components/Loader.module.css'
+import GifLoader from 'react-gif-loader'
+import loadingGif from '../img/Loading_icon.gif'
+
 
 
 const Loader = () => {
-    return (<div className={styles.loading}>
-<h1>
+    return (<div >
 
-loading . . .</h1> 
+        <GifLoader
+        loading={true}
+        imageSrc={loadingGif}
+        
+        />
         </div>  );
 }
  
 export default Loader;
 
 
-
-// <GifLoader
-// loading={true}
-// imageSrc={loadingGif}
-// className={styles.loading}
-
-// />
