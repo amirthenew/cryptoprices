@@ -28,17 +28,12 @@ const sortByName = ()=>{
   const newCoinArray = []
   coins.map((coin)=>newCoinArray.push(coin.id))
   console.log(newCoinArray);
-  // coins.sort(function(a,b){
-  //   return a===b ? 0 : a<b ? -1 : 1
-  // })
- 
 
-  // coins.map((coin)=>console.log(coin.id.sort()) )
-
-  
-  
-
-  
+  newCoinArray.sort(function(a,b){
+    return a===b ? 0 : a<b ? -1 : 1
+  })
+console.log(newCoinArray);
+setCoins(newCoinArray)
 }
 
 const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search.toLowerCase()) )
