@@ -33,7 +33,7 @@ const sortByName = ()=>{
     return a===b ? 0 : a<b ? -1 : 1
   })
 console.log(newCoinArray);
-setCoins(newCoinArray)
+
 }
 
 const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search.toLowerCase()) )
