@@ -1,10 +1,10 @@
 .container {
     margin: auto;
 display: flex;
-justify-content: center;
+
 align-items: center;
     background-color: rgb(36, 36, 36);
-    width: 40%;
+    width: 40vw;
     padding: 1rem 3rem;
     color: #fff;
     border-bottom: 1px solid silver;

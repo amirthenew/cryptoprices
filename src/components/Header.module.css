@@ -6,12 +6,13 @@
 .container {
 display: flex;
 margin: auto;
-width: 43vw;
+width: 44vw;
 background-color: rgb(36, 36, 36);
 justify-content: space-evenly;
 color: #fff;
 padding: 1.5rem 1rem;
 border-radius: 1rem;
+margin-top: .2rem;
 
 }
 
@@ -19,16 +20,15 @@ border-radius: 1rem;
 
 
 
-    /* width: 40vw;
-    padding: 1rem 3rem;
-    color: #fff;
-    border-bottom: 1px solid silver;
-    margin-top: .2rem;
-    border-radius: 1rem;
-    overflow: hidden; */
 
-    .price,.symbol,.name,.change{
+
+    .container > *{
 
         border-right: solid 1px #fff;
         padding-right: 1.5rem;
     }
+
+    .mrketCap{
+        border: none;
+    }
+ 
