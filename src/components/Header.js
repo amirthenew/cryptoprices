@@ -3,8 +3,9 @@ import styles from './Header.module.css'
 
 const Header = (props) => {
     return ( 
-
+<div className={styles.maindiv}>
 <div className={styles.container}>
+
 
 <div className={styles.name} onClick={props.sortByName} >
 Coin name
@@ -25,6 +26,8 @@ change
 
 <div className={styles.mrketCap} onClick={props.mainSort}>
 Marketcap
+</div>
+
 </div>
 
 </div>
