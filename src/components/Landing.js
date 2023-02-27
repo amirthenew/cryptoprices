@@ -1,7 +1,7 @@
 import React,{useState,useEffect}from 'react';
 
 import styles from './Landing.module.css'
-import { getCoin } from '../services/api';
+import { getCoin ,getCoinByName} from '../services/api';
 import Loader from './Loader';
 import Coin from './Coin';
 
@@ -16,27 +16,38 @@ const fetchAPI = async()=>{
   const data = await getCoin()
  setCoins(data)
 }
+
 fetchAPI()
     },[])
+
+    const fetchAPIByName = async()=>{
+      const data = await getCoinByName()
+      console.log(data);
+      setCoins(data)
+    }
 
 const searchHandler = (event)=>{
   setSearch(event.target.value)
 }
 
 const sortByName = ()=>{
-  console.log(coins)
-  const newCoinArray = []
-  coins.map((coin)=>newCoinArray.push(coin.id))
-  console.log(newCoinArray);
 
-  newCoinArray.sort(function(a,b){
-    return a===b ? 0 : a<b ? -1 : 1
-  })
-console.log(newCoinArray);
+  fetchAPIByName()
+//   console.log(coins)
+//   const newCoinArray = []
+//   coins.map((coin)=>newCoinArray.push(coin.id))
+//   console.log(newCoinArray);
+  
+
+//   newCoinArray.sort(function(a,b){
+//     return a===b ? 0 : a<b ? -1 : 1
+//   })
+// console.log(newCoinArray);
 
 }
 
 const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search.toLowerCase()) )
+
 
     return (
      <div>
@@ -57,6 +68,7 @@ const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search
   priceChange={coin.price_change_percentage_24h}
    />)
         }
+
  </div> : <Loader/>   
       }  
 
