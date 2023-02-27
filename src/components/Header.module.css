@@ -1,7 +1,22 @@
 .container {
 display: flex;
 margin: auto;
-width: 45%;
-background-color: aquamarine;
-justify-content: space-between;
+width: 43vw;
+background-color: rgb(36, 36, 36);
+justify-content: space-evenly;
+color: #fff;
+padding: 1rem;
+border-radius: 1rem;
 }
+
+
+
+
+
+    /* width: 40vw;
+    padding: 1rem 3rem;
+    color: #fff;
+    border-bottom: 1px solid silver;
+    margin-top: .2rem;
+    border-radius: 1rem;
+    overflow: hidden; */
