@@ -47,7 +47,7 @@ const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search
       <input className={styles.input} value={search} type='text' placeholder='search' onChange={searchHandler}/>
       
       <button onClick={sortByName}>sort by name</button>
-      <Header/>
+      <Header sortByName={sortByName}/>
       { 
         
         coins.length ? 

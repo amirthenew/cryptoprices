@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Header.module.css'
 
-const Header = () => {
+const Header = (props) => {
     return ( 
 
 <div className={styles.container}>
 
-<div>
+<div onClick={props.sortByName} >
 Coin name
 </div>
 
