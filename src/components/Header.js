@@ -6,19 +6,19 @@ const Header = (props) => {
 
 <div className={styles.container}>
 
-<div onClick={props.sortByName} >
+<div className={styles.name} onClick={props.sortByName} >
 Coin name
 </div>
 
-<div>
+<div className={styles.symbol}>
 symbol
 </div>
 
-<div>
+<div className={styles.price}>
 price
 </div>
 
-<div>
+<div className={styles.change}>
 change
 </div>
 

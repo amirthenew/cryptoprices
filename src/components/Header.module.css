@@ -20,3 +20,9 @@ border-radius: 1rem;
     margin-top: .2rem;
     border-radius: 1rem;
     overflow: hidden; */
+
+    .price,.symbol,.name,.change{
+
+        border-right: solid 1px #fff;
+        padding-right: 4rem;
+    }
