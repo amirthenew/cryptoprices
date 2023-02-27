@@ -21,6 +21,15 @@ const fetchAPI = async()=>{
 fetchAPI()
     },[])
 
+    const mainSort = ()=>{
+      const fetchAPI = async()=>{
+        const data = await getCoin()
+       setCoins(data)
+      }
+      fetchAPI()
+    }
+
+
     const fetchAPIByName = async()=>{
       const data = await getCoinByName()
       console.log(data);
@@ -47,7 +56,7 @@ const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search
       <input className={styles.input} value={search} type='text' placeholder='search' onChange={searchHandler}/>
       
       <button onClick={sortByName}>sort by name</button>
-      <Header sortByName={sortByName}/>
+      <Header sortByName={sortByName} mainSort={mainSort}/>
       { 
         
         coins.length ? 

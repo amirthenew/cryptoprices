@@ -5,7 +5,7 @@ width: 43vw;
 background-color: rgb(36, 36, 36);
 justify-content: space-evenly;
 color: #fff;
-padding: 1rem;
+padding: 1.5rem 1rem;
 border-radius: 1rem;
 }
 
@@ -24,5 +24,5 @@ border-radius: 1rem;
     .price,.symbol,.name,.change{
 
         border-right: solid 1px #fff;
-        padding-right: 4rem;
+        padding-right: 1.5rem;
     }

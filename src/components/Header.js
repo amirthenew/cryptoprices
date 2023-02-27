@@ -22,6 +22,11 @@ price
 change
 </div>
 
+
+<div className={styles.mrketCap} onClick={props.mainSort}>
+Marketcap
+</div>
+
 </div>
 
      );
