@@ -4,6 +4,7 @@ import styles from './Landing.module.css'
 import { getCoin ,getCoinByName} from '../services/api';
 import Loader from './Loader';
 import Coin from './Coin';
+import Header from './Header';
 
 const Landing = () => {
 
@@ -40,10 +41,15 @@ const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search
 
     return (
      <div>
+
+     
  
       <input className={styles.input} value={search} type='text' placeholder='search' onChange={searchHandler}/>
+      
       <button onClick={sortByName}>sort by name</button>
+      <Header/>
       { 
+        
         coins.length ? 
         <div className={styles.coinContainer}>
         {
