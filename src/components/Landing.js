@@ -33,17 +33,6 @@ const searchHandler = (event)=>{
 const sortByName = ()=>{
 
   fetchAPIByName()
-//   console.log(coins)
-//   const newCoinArray = []
-//   coins.map((coin)=>newCoinArray.push(coin.id))
-//   console.log(newCoinArray);
-  
-
-//   newCoinArray.sort(function(a,b){
-//     return a===b ? 0 : a<b ? -1 : 1
-//   })
-// console.log(newCoinArray);
-
 }
 
 const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search.toLowerCase()) )
