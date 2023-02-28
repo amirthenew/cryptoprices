@@ -51,8 +51,10 @@ input{
 
 }
 
-::placeholder{
-    animation: blink 1s;
+input{
+    animation: blink 1s linear infinite;
+
+
 }
 
 
@@ -85,16 +87,9 @@ margin-top: .2rem;
  }
 
 
- @-webkit-keyframes blink {
-
-   0%{opacity: 1;}
-   50%{opacity: 0;}
-   100%{opacity: 1;}
- }
-
  @keyframes blink {
 
-    0%{opacity: 1;}
-    50%{opacity: 0;}
-    100%{opacity: 1;}
+    0%{ background-image: url(../img/mag.svg)}
+    50%{ background-image: none}
+   100%{background-image: url(../img/mag.svg)}
   }
