@@ -10,7 +10,6 @@
 .container {
 display: flex;
 margin: auto;
-width: 44vw;
 background-color: rgb(36, 36, 36);
 justify-content: space-evenly;
 color: #fff;
@@ -23,17 +22,28 @@ flex-direction: column;
 }
 
 input{
-    width: 30%;
+
     text-align: center;
     display: flex;
     margin: auto;
+    background-color: rgb(36, 36, 36);
+    border-bottom: 1px #fff solid !important;
+    border: none;
+    color: #fff;
+    font-size: medium;
+
+}
+
+input:focus{
+    border: none;
+    outline: none;
 }
 
 
 .rows{
 display: flex;
 margin: auto;
-width: 44vw;
+width: 42vw;
 background-color: rgb(36, 36, 36);
 justify-content: space-evenly;
 color: #fff;
