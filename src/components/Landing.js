@@ -10,6 +10,9 @@ const Landing = () => {
 
   const [coins,setCoins]=useState([])
   const [search,setSearch]=useState('')
+    const searchHandler = (event)=>{
+        setSearch(event.target.value)
+      }
 
   
     useEffect(()=>{
@@ -36,14 +39,14 @@ fetchAPI()
       setCoins(data)
     }
 
-const searchHandler = (event)=>{
-  setSearch(event.target.value)
-}
+
 
 const sortByName = ()=>{
 
   fetchAPIByName()
 }
+
+
 
 const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search.toLowerCase()) )
 
@@ -51,8 +54,8 @@ const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search
     return (
      <div>
 
-      <input className={styles.input} value={search} type='text' placeholder='search' onChange={searchHandler}/>
-      <Header sortByName={sortByName} mainSort={mainSort}/>
+    
+      <Header search={search} sortByName={sortByName} mainSort={mainSort} searchHandler={searchHandler} />
       { 
         
         coins.length ? 

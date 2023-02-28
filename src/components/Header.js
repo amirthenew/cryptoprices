@@ -1,11 +1,12 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styles from './Header.module.css'
 
 const Header = (props) => {
+
     return ( 
 <div className={styles.maindiv}>
 <div className={styles.container}>
-
+<input className={styles.input} value={props.search} type='text' placeholder='search' onChange={props.searchHandler}/>
 
 <div className={styles.name} onClick={props.sortByName} >
 Coin name
@@ -36,3 +37,6 @@ Marketcap
 }
  
 export default Header;
+
+
+// <input className={styles.input} value={search} type='text' placeholder='search' onChange={searchHandler}/>
