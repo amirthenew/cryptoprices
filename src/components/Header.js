@@ -1,12 +1,16 @@
 import React,{useState} from 'react';
 import styles from './Header.module.css'
+import magIcon from '../img/mag.svg'
 
 const Header = (props) => {
+
+    
 
     return ( 
 <div className={styles.maindiv}>
 <div className={styles.container}>
 <input className={styles.input} value={props.search} type='text' placeholder='search' onChange={props.searchHandler}/>
+<img style={{width:'10px',color:'#fff'}} src={magIcon}/>
 <div className={styles.rows}>
 <div className={styles.name} onClick={props.sortByName} >
 Coin name
