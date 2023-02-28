@@ -1,10 +1,11 @@
 
 .container{
-
-    height: 200px;
-    width: 200px;
-    position: relative;
+    position: fixed;
     bottom: 0;
     right: 0;
-    background-color: blueviolet;
+    background-color: rgb(46, 46, 46);
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: .5rem 3rem;
+    color:#fff;
 }

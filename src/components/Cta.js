@@ -5,8 +5,9 @@ const Cta = () => {
     return (
 
         <div className={styles.container}>
-        <div>
-        </div>
+<h1>
+Buy now !
+</h1>
         </div>
       );
 }
