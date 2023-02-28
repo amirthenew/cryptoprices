@@ -27,7 +27,8 @@ input{
     display: flex;
     margin: auto;
     background-color: rgb(36, 36, 36);
-    border-bottom: 1px #fff solid !important;
+    border-bottom: 0.5px #fff solid !important;
+
     border: none;
     color: #fff;
     font-size: medium;
@@ -38,14 +39,20 @@ input:focus{
     border: none;
     outline: none;
     -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
 }
 input{
     background-image: url(../img/mag.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    text-indent: 30px;
+    text-indent: 25px;
 
 
+}
+
+::placeholder{
+    animation: blink 1s;
 }
 
 
@@ -76,3 +83,18 @@ margin-top: .2rem;
  .mag{
     max-width: 20px;
  }
+
+
+ @-webkit-keyframes blink {
+
+   0%{opacity: 1;}
+   50%{opacity: 0;}
+   100%{opacity: 1;}
+ }
+
+ @keyframes blink {
+
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+  }
