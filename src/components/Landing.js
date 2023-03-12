@@ -5,7 +5,6 @@ import { getCoin ,getCoinByName} from '../services/api';
 import Loader from './Loader';
 import Coin from './Coin';
 import Header from './Header';
-import Cta from './Cta';
 
 const Landing = () => {
 
@@ -75,7 +74,6 @@ const searchedCoins= coins.filter(coin=> coin.name.toLowerCase().includes(search
 
  </div> : <Loader/>   
       }  
-<Cta/>
  </div>
    
 );
